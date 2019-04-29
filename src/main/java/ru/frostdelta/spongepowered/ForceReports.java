@@ -22,7 +22,6 @@ public class ForceReports {
 
     @Listener
     public void onServerStart(GameStartedServerEvent event) {
-
-
+        logger.info("Developed by FrostDelta123");
     }
 }
