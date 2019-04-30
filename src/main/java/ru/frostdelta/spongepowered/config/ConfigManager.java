@@ -28,11 +28,10 @@ public class ConfigManager {
     @ConfigDir(sharedRoot = false)
     private Path privateConfigDir;
 
-
     public static void loadConfig() throws IOException {
         ConfigurationNode rootNode;
         rootNode = loader.load();
-        if (!rootNode.hasMapChildren()) { // is empty
+        if (!rootNode.hasMapChildren()) {
             ForceReports.getLogger().info("No config found - loading default");
             URL jarConfigFile = Sponge.getAssetManager().getAsset("config.conf").get().getUrl();
             ConfigurationLoader<CommentedConfigurationNode> defaultLoader =
